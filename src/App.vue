@@ -1,10 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
+    <v-app-bar app color="primary" dark>
       <div class="d-flex align-center">
         <v-img
           alt="Vuetify Logo"
@@ -38,23 +34,37 @@
     </v-app-bar>
 
     <v-main>
-      <Boletas/>
+      <Boletas :pagos="pagos"/>
+      <!-- <Boletas /> -->
     </v-main>
   </v-app>
 </template>
 
 <script>
-import Boletas from './components/Boletas'
+import Boletas from "./components/BoletasAjuste";
 
 export default {
-  name: 'App',
+  name: "App",
 
   components: {
-    Boletas
+    Boletas,
   },
 
   data: () => ({
-    //
+    mensaje: {},
+    //Datos para componenete Bolretas AJUSte
+    pagos: [
+      {
+        periodo: "01/01/01",
+        liquido: "4532.80",
+        monto_de_ajuste: 1.0,
+        bono_frontera: 2.0,
+        bono_cargo: 3.0,
+        bono_oriente: 4.0,
+        bono_seguridad: 5.0,
+        bono_renta: 6.0,
+      },
+    ],
   }),
 };
 </script>

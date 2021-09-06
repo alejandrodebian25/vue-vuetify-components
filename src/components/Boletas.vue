@@ -10,6 +10,16 @@
           class="elevation-1"
           hide-default-footer
         >
+          <v-template slot="body.append">
+            <tr>
+              <th>Total</th>
+              <th>150</th>
+              <th>260</th>
+              <th>150</th>
+              <th>260</th>
+              <th>33%</th>
+            </tr>
+          </v-template>
         </v-data-table>
       </v-col>
     </v-row>
